@@ -40,7 +40,7 @@ public class EmployeeController {
 		Employee employee = employeeRepository.findById(id)
 				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Employee not found"));
 
-		TaxDetails taxDetails = employeeService.getTaxDetails(employee);
+		TaxDetails taxDetails = employeeService.getTaxDetailsWithRules(employee);
 
 		return ResponseEntity.ok(taxDetails);
 	}

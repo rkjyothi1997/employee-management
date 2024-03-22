@@ -10,7 +10,7 @@ import com.fleetenable.utils.EmployeeUtil;
 
 public class EmployeeService {
 
-	public TaxDetails getTaxDetails(Employee employee) {
+	public TaxDetails getTaxDetailsWithRules(Employee employee) {
 
 		LocalDate startOfFinancialYear = LocalDate.of(LocalDate.now().getYear(), Month.APRIL, 1);
 		if (employee.getDoj().isAfter(startOfFinancialYear)) {
