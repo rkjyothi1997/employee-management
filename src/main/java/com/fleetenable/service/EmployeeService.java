@@ -4,10 +4,13 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.time.temporal.ChronoUnit;
 
+import org.springframework.stereotype.Service;
+
 import com.fleetenable.models.Employee;
 import com.fleetenable.models.TaxDetails;
 import com.fleetenable.utils.EmployeeUtil;
 
+@Service
 public class EmployeeService {
 
 	public TaxDetails getTaxDetailsWithRules(Employee employee) {
